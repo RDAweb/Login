@@ -43,7 +43,7 @@ const firebaseConfig = {
   const logoutButton=document.getElementById('logout');
 
   logoutButton.addEventListener('click',()=>{
-    localStorage.removeItem('loggedInUserId');
+    firebase.removeItem('loggedInUserId');
     signOut(auth)
     .then(()=>{
         window.location.href='index.html';
