@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hmain{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: transparent;
+    user-select: none;
+    background: transparent; /* Dark gradient header */
+}
+
+.minmain{
+    width: 1257px;
+    margin: 0;
+    padding: 0;
+}
+
+.maxmain{
+    width: 100%;
+    float: left;
+}
+
+/* Default Light Mode */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body, h1, h2, h3, p, a, li {
+    color: #333; /* Default dark text color */
+}
+
+body, .navbar, .punjabictresses, .heading {
+    background-color: #f4f4f4; /* Light background */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode Background and Text Colors */
+body.dark-mode, 
+body.dark-mode .navbar, 
+body.dark-mode .punjabictresses, 
+body.dark-mode .heading {
+    background-color: #333; /* Dark background */
+    color: #f4f4f4; /* White text in dark mode */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+body.dark-mode .punjabictresses p{
+    background-color: transparent;
+}
+
+/* Dark Mode Styles */
+body.dark-mode, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p, body.dark-mode a, body.dark-mode li {
+    color: #f4f4f4; /* White text in dark mode */
+}
+/* Styling for Toggle Switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.theme-switch-wrapper:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    border-radius: 34px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.slider:before {
+    background-color: white;
+    border-radius: 50%;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px) scale(1.2);
+    transition: transform 0.3s ease, background-color 0.4s ease;
+}
+
+/* Rounded switch */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.heading{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    min-height: 60px;
+    align-items: center;
+}
+
+.navbar{
+    background-color: blue;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#main {
+    padding: 40px;
+    text-align: center;
+}
+
+.punjabictresses{
+    display: flex;
+    margin-left: 20px;
+    min-height: 300px;
+    text-decoration: none;
+}
+
+.punjabictresses, .navbar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.punjabictresses img{
+    position: relative;
+    left: -180px;
+    margin-top: 90px;
+    width: 130px;
+    height: 160px;
+    border: 10px solid black;
+    border-bottom: 0;
+    margin-left: 30px;
+    border-radius: 20px;
+}
+
+.punjabictresses p{
+    position: relative;
+    left: -138px;
+    color: black;
+    text-decoration: none;
+    font-weight: 550;
+    top: -5px;
+    color: rgb(0, 0, 0);
+}
+
+#Japji{
+    position: relative;
+    left: -130px;
+    top: -5px;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+    text-decoration-color: black;
+}
+
+#tania{
+    position: relative;
+    left: -100px;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+}
+.punjabictresses h2{
+    margin: 20px 30px;
+}
+
+/* Hover effects for images */
+.punjabictresses img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.punjabictresses img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effects for navigation links */
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Optional: Glass effect on the heading as well */
+.heading {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
