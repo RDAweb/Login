@@ -1,6 +1,6 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
- import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendpasswordResetEmail} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
@@ -10,14 +10,11 @@
     storageBucket: "login-form-91c8d.appspot.com",
     messagingSenderId: "591382465004",
     appId: "1:591382465004:web:35b198901cf903ab8018c9"
- //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
  };
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
- const forgotpasslabel = initializeApp(forgotpasslabel);
- 
+
  function showMessage(message, divId){
     var messageDiv=document.getElementById(divId);
     messageDiv.style.display="block";
@@ -92,15 +89,3 @@
         }
     })
  })
-let ForgotPassword = ()=>{
-    sendpasswordResetEmail(auth,EmailInp.value)
-    .then(()=>{
-        alert("A Password reset link has been sent to your email");
-    })
-    .catch((error)=>{
-        console.log(error.code);
-        console.log(error.message);
-    })
-}
-
-forgotpasslabel.addEventListener('click',ForgotPassword)
